@@ -1,0 +1,268 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+  
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/cheffood.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+  
+html {
+  scroll-behavior: smooth;
+}
+  
+/* heading section */
+
+.gallery_divs {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  padding: 20px; 
+  position: relative;
+  background: rgba(0, 0, 0, 0.3); 
+  z-index: 1;
+}
+  
+.gallery_title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+  
+.gallery_title h1 {
+  font-size: 2.5rem; 
+  font-weight: bold;
+  border-bottom: 4px solid #ffc403; 
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.gallery_content {
+  text-align: center;
+  max-width: 90%; 
+  padding: 20px 14rem;
+}
+
+.gallery_content p {
+  font-size: 1.5rem; 
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .gallery_title h1 {
+    font-size: 2rem; 
+  }
+
+  .gallery_content {
+    padding: 5px; 
+  }
+
+  .gallery_content p {
+    font-size: 1rem; 
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery_title h1 {
+    font-size: 2rem; 
+  }
+
+  .gallery_content p {
+    font-size: 1rem; 
+  }
+}
+
+/* gallary */
+
+#gallary_sec {
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px; 
+  background-color: #000000;
+}
+
+#gallary_sec h1 {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 50px;
+  text-shadow: 1px 1px 1px black;
+  border-bottom: 2px solid rgba(161, 109, 14, 1);
+}
+
+#gallary_sec .card {
+  position: relative; 
+  box-shadow: 3px 3px 3px black;
+  cursor: pointer;
+  overflow: hidden; 
+}
+
+#gallary_sec .overlay {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 0.6); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  opacity: 0; 
+  transition: opacity 0.5s ease; 
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+#gallary_sec .card:hover .overlay {
+  opacity: 1; 
+}
+
+/* MENU  */
+
+.gallery {
+  margin-top: 50px;
+  text-align: center;
+  min-height: 100vh;
+  padding-bottom: 100px;
+}
+
+.gallery .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
+  list-style: none;
+}
+
+.buttons {
+  padding: 10px 20px;
+  margin: 5px; 
+  background-color: rgba(161, 109, 14, 1);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons.active {
+  background-color: rgba(161, 109, 14, 0.8);
+}
+
+.buttons:hover {
+  background-color: rgba(161, 109, 14, 0.5);
+}
+
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+  gap: 20px; 
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.image {
+  height: 250px;
+  width: 100%; 
+  position: relative;
+  overflow: hidden;
+  border: 3px solid #fff;
+  transition: transform 0.7s ease; 
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.986);
+  display: none; 
+}
+
+.image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease; 
+}
+
+.image:hover {
+  transform: scale(1.05); 
+}
+
+.image:hover img {
+  transform: scale(1.1); 
+}
+
+.image.active {
+  display: block; 
+}
+
+@media (max-width: 768px) {
+  .buttons {
+    padding: 8px 15px; 
+    font-size: 14px;
+  } 
+}
+
+@media (max-width: 480px) {
+  .buttons {
+    padding: 5px 10px; 
+    font-size: 12px; 
+  }
+}
+
+/*  View restaurent */
+.vw_glry {
+  background: #000000; 
+  padding: 50px 0; 
+}
+
+#gallary1 h1 {
+  position: relative; 
+  margin-top: 100px;
+  text-shadow: 1px 1px 1px black; 
+  font-size: 2.5rem;
+  padding-bottom: 20px; 
+}
+
+#gallary1 h1::after {
+  content: ''; 
+  display: block; 
+  width: 30%; 
+  height: 2px; 
+  background: #a18b0e; 
+  margin: 10px auto; 
+}
+
+
+#gallary1 .card {
+  border: none; 
+  border-radius: 10px; 
+  overflow: hidden; 
+  transition: transform 0.3s ease; 
+}
+
+#gallary1 .card img {
+  width: 100%; 
+  height: auto; 
+  transition: 0.5s ease; 
+}
+
+#gallary1 .card img:hover {
+  transform: translateY(-10px);
+} 
+#gallary1 .card-body {
+  background-color: #222; 
+  text-align: center; 
+  padding: 15px; 
+  border-top: 1px solid #a1970e; 
+}
+
+@media (max-width: 768px) {
+  #gallary1 h1 {
+    font-size: 2rem; 
+  }
+}
